@@ -1,0 +1,361 @@
+/* sorting */
+.rect {
+	background-color: steelblue;
+	outline: 1px black;
+	height: 20px;
+	width: 20px;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+/* queen */
+.boardCell {
+	width: 100px;
+	height: 100px;
+
+	outline: 2px solid #607d8b;
+	display: inline-flex;
+}
+.checked {
+	background-image: radial-gradient(circle, #b3e5fc, #29b6f6);
+}
+.attacked {
+	background-image: radial-gradient(circle, #ef9a9a, darkred);
+}
+.current {
+	background-image: radial-gradient(circle, #fff176, #f57f17);
+}
+.present {
+	background-image: radial-gradient(circle, #dce775, #43a047);
+}
+.booard {
+	font-size: 0;
+}
+
+/* cell */
+.Cells {
+	font-size: 0px;
+}
+
+/* cell */
+.cell {
+	height: 50px;
+	width: 50px;
+	background-color: rgb(243, 236, 236);
+	outline: 1px solid rgb(156, 156, 202);
+	display: inline-block;
+	font-size: 25px;
+	text-align: center;
+	color: black;
+	border-radius: 5px 5px;
+}
+
+.cell-prime {
+	background-color: #00e9f5;
+	animation-name: isPrime;
+	animation-duration: 1s;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+@keyframes isPrime {
+	0% {
+		transform: rotate(90deg);
+		background-color: rgba(0, 0, 66, 0.75);
+		border-radius: 100%;
+	}
+
+	50% {
+		background-color: rgba(17, 104, 217, 0.75);
+		transform: scale(1.5);
+	}
+
+	75% {
+		background-color: rgba(0, 217, 159, 0.75);
+		transform: rotate(270deg);
+	}
+
+	100% {
+		background-color: rgba(0, 190, 218, 0.75);
+		transform: rotate(360deg);
+	}
+}
+.cell-check {
+	background-color: grey;
+}
+.cell-visiting {
+	outline: 3px solid rgb(175, 216, 248);
+	animation-name: isVisiting;
+	animation-duration: 1s;
+}
+@keyframes isVisiting {
+	50% {
+		transform: scale(1.5);
+	}
+}
+
+/* pathfinder */
+.Grid {
+	font-size: 0;
+}
+div {
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+.node {
+	height: 25px;
+	width: 25px;
+	background-color: rgb(243, 236, 236);
+	outline: 1px solid rgb(156, 156, 202);
+	display: inline-block;
+}
+
+.node-start {
+	background-color: chartreuse;
+}
+.node-end {
+	background-color: brown;
+}
+.node-visited {
+	animation-name: visitedAnimation;
+	animation-iteration-count: 1;
+	animation-duration: 1.5s;
+	animation-delay: 0;
+	background-color: rgba(85, 200, 210, 0.75);
+}
+
+@keyframes visitedAnimation {
+	0% {
+		transform: scale(0.3);
+		background-color: rgba(0, 66, 29, 0.75);
+		border-radius: 100%;
+	}
+
+	50% {
+		background-color: rgba(19, 218, 52, 0.75);
+	}
+
+	75% {
+		transform: scale(1.2);
+		background-color: rgba(0, 217, 159, 0.75);
+	}
+
+	100% {
+		transform: scale(1);
+		background-color: rgba(76, 218, 0, 0.75);
+	}
+}
+
+.node-wall {
+	background-color: black;
+	outline: 1px solid black;
+	animation-name: wallAnimation;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-out;
+	animation-delay: 0;
+	animation-direction: alternate;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+@keyframes wallAnimation {
+	0% {
+		transform: scale(0.3);
+		background-color: rgb(98, 145, 165);
+	}
+
+	50% {
+		transform: scale(1.2);
+		background-color: rgb(37, 93, 118);
+	}
+
+	100% {
+		transform: scale(1);
+		background-color: rgb(12, 53, 71);
+	}
+}
+
+.node-shortest-path {
+	animation-name: shortestPath;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-delay: 0;
+	animation-direction: alternate;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+
+@keyframes shortestPath {
+	0% {
+		transform: scale(0.6);
+		background-color: lightgreen;
+	}
+
+	50% {
+		transform: scale(1.2);
+		background-color: lightgoldenrodyellow;
+	}
+
+	100% {
+		transform: scale(1);
+		background-color: lightpink;
+	}
+}
+
+/* home */
+
+.type {
+	width: 100%;
+	align-content: center;
+	background-color: #282c34;
+	text-align: center;
+	font-family: "Roboto Slab ExtraLight";
+}
+
+.Cards {
+	background-color: gray;
+	align-items: center;
+	align-self: center;
+	align-content: center;
+	position: center;
+}
+.page-footer {
+	background-color: #282c34;
+}
+.footer-copyright {
+	color: white;
+	background-color: black;
+}
+
+/* tree */
+.tree-node {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.tree-node.active {
+	background-color: #569858;
+	/*Greencolorfortheactivenode*/
+	transform: scale(1.2);
+	/* Make the node slightly larger */
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+}
+
+@keyframes pulsate {
+	0% {
+		transform: scale(1);
+		box-shadow: 0 0 10px rgba(141, 43, 198, 0.7);
+	}
+	50% {
+		transform: scale(1.15);
+		box-shadow: 0 0 20px rgba(52, 72, 221, 0.9);
+	}
+	100% {
+		transform: scale(1);
+		box-shadow: 0 0 10px rgba(39, 163, 191, 0.7);
+	}
+}
+
+.tree-node.pulsate {
+	animation: pulsate 1s infinite; /* Add a pulsating effect to the active node */
+}
+
+.grid {
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	position: relative;
+}
+
+.tree-grid {
+	display: grid;
+	grid-template-columns: repeat(9, 100px); /* 9 columns */
+	grid-template-rows: repeat(5, 100px); /* 5 rows */
+	justify-content: center;
+	align-items: center;
+	place-items: center;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Base style for lines */
+.left-line {
+	width: 2px;
+	height: 185px;
+	background-color: gray;
+	position: relative;
+	transition: background-color 0.5s ease, box-shadow 0.5s ease;
+	transform: rotate(45deg);
+	/*45-degreeline*/
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+
+.right-line {
+	width: 2px;
+	height: 185px;
+	background-color: gray;
+	position: relative;
+	transition: background-color 0.5s ease, box-shadow 0.5s ease;
+	transform: rotate(-45deg); /* -45-degree line */
+}
+
+/* Line active during traversal */
+.left-line.active,
+.right-line.active {
+	background-color: #3c98c0; /* Blue color for active lines */
+	box-shadow: 0px 0px 5px 2px rgba(49, 167, 193, 0.7); /* Add glowing effect */
+}
+
+/* Add keyframes for line draw effect */
+@keyframes drawLine {
+	from {
+		height: 0;
+	}
+	to {
+		height: 185px;
+	}
+}
+
+/* Apply the line-drawing animation */
+.left-line.animated,
+.right-line.animated {
+	animation: drawLine 1s forwards;
+}
+
+.traversal-display {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.traversal-display h3 {
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.traversal-display p {
+	font-weight: bold;
+	color: #333;
+}
+/* Style for visited nodes */
+.tree-node.visited {
+	background-color: rgb(62, 214, 231); /* Red for visited node */
+	transform: scale(1.2);
+}
