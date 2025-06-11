@@ -2,10 +2,9 @@ Algorithm Visualizer
 
 A better visualization of different algorithms made with React.
 
-There are 6 segments
+There are 5 segments
 
 -   Pathfinder
--   Prime Numbers
 -   Sorting Algorithms
 -   N Queen
 -   Binary Search Game
@@ -16,19 +15,17 @@ There are 6 segments
 -   Graph Search
     -   DFS
     -   BFS
-    -   Dijkstra
-    -   Maze Creation
+      
 -   Sorting
     -   Bubble sort
     -   Selection sort
     -   Insertion sort
-    -   Heap sort
     -   Merge sort
     -   Quick sort
--   Sieve of Eratosthenes
+  
 -   N Queen Backtracking
 -   Binary Search
 -   Binary Tree Traversals
-    -   Inorder Traversals
-    -   Preorder Traversals
-    -   Postorder sort
+    -   Inorder Traversal
+    -   Preorder Traversal
+    -   Postorder Traversal
